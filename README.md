@@ -19,7 +19,7 @@ This guide explains how to bypass CAPTCHAs in Selenium:
 ## What Are CAPTCHAs?
 
 
-A **CAPTCHA** (Completely Automated Public Turing test to tell Computers and Humans Apart) is used to distinguish human users from bots. It presents challenges that are easy for humans but difficult for machines. Common providers include Google reCAPTCHA, hCaptcha, and BotDetect.
+A [**CAPTCHA**](https://brightdata.com/blog/web-data/what-is-a-captcha) (Completely Automated Public Turing test to tell Computers and Humans Apart) is used to distinguish human users from bots. It presents challenges that are easy for humans but difficult for machines. Common providers include Google reCAPTCHA, hCaptcha, and BotDetect.
 
 ## Common CAPTCHA Types
 
@@ -28,19 +28,19 @@ A **CAPTCHA** (Completely Automated Public Turing test to tell Computers and Hum
 - **Audio-based**: Type words from an audio clip.  
 - **Puzzle-based**: Solve simple puzzles (e.g., mazes).  
 
-![Text CAPTCHA example](https://brightdata.com/wp-content/uploads/2024/07/Text-CAPTCHA-example.png)
+![Text CAPTCHA example](https://github.com/luminati-io/bypass-captcha-with-selenium/blob/main/images/Text-CAPTCHA-example.png)
 
 Often, CAPTCHAs appear at the final step of form submissions:
 
-![CAPTCHA in form submission](https://brightdata.com/wp-content/uploads/2024/07/CAPTCHA-as-a-step-of-a-form-submission-process-example.png)
+![CAPTCHA in form submission](https://github.com/luminati-io/bypass-captcha-with-selenium/blob/main/images/CAPTCHA-as-a-step-of-a-form-submission-process-example.png)
 
 They prevent automated bots from completing actions. While CAPTCHA-solving services exist, hard-coded CAPTCHAs are rare due to **poor user experience**.
 
 CAPTCHAs are part of broader security measures like **Web Application Firewalls (WAFs)**:
 
-![Web Application Firewall](https://brightdata.com/wp-content/uploads/2024/07/Example-of-a-Web-Application-Firewall-1024x488.png)
+![Web Application Firewall](https://github.com/luminati-io/bypass-captcha-with-selenium/blob/main/images/Example-of-a-Web-Application-Firewall-1024x488.png)
 
-These systems trigger CAPTCHAs when detecting suspicious activity. To bypass them, bots must **mimic human behavior**, which requires frequent script updates.
+These systems trigger CAPTCHAs when detecting suspicious activity. To bypass them, bots must **mimic human behavior**, which requires frequent script updates. 
 
 ## Selenium CAPTCHA Handling: Step-By-Step Tutorial
 
@@ -217,7 +217,7 @@ python script.py
 
 The script launches a **Chromium instance in headless mode**, navigates to the target page, captures a screenshot, and then closes the browser. After execution, a `screenshot.png` file will appear in the project root folder.
 
-![screenshot.png file example](https://brightdata.com/wp-content/uploads/2024/07/screenshot.png-file-example-206x1024.png)
+![screenshot.png file example](https://github.com/luminati-io/bypass-captcha-with-selenium/blob/main/images/screenshot.png-file-example-206x1024.png)
 
 As shown by the red boxes, Chrome in headless mode fails multiple detection tests. This means your script is likely flagged as a bot, leading to CAPTCHA challenges on protected sites.
 
@@ -353,7 +353,7 @@ python script.py
 
 Take a look at `screenshot.png`, and you will notice that all bot detection tests have been passed:
 
-![All bot detection tests passed on the new screenshot.png](https://brightdata.com/wp-content/uploads/2024/07/All-bot-detction-tests-passed-on-the-new-screenshot-249x1024.png)
+![All bot detection tests passed on the new screenshot.png](https://github.com/luminati-io/bypass-captcha-with-selenium/blob/main/images/All-bot-detction-tests-passed-on-the-new-screenshot-249x1024.png)
 
 ## What If the Above Solution Does Not Work?
 
@@ -363,7 +363,7 @@ Even with an optimally configured browser, CAPTCHAs may still appear. For basic 
 
 Basic methods fail against complex anti-bot systems like Cloudflare. For a robust solution, use Bright Data’s web scraping tools, which support  reCAPTCHA, hCaptcha, px_captcha, SimpleCaptcha, GeeTest, FunCaptcha, Cloudflare Turnstile, AWS WAF Captcha, KeyCAPTCHA, and more.
 
-Bright Data’s CAPTCHA Solver works with any HTTP client or browser automation tool, including Selenium.
+[Bright Data’s CAPTCHA Solver](https://brightdata.com/products/web-unlocker/captcha-solver) works with any HTTP client or browser automation tool, including Selenium.
 
 ## Conclusion
 
